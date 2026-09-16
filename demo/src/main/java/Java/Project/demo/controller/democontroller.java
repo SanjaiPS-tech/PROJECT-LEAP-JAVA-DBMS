@@ -1,23 +1,23 @@
 package Java.Project.demo.controller;
 
-import java.util.List;
+// import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.PathVariable;
+// import org.springframework.web.bind.annotation.PostMapping;
 
-import Java.Project.demo.service.DemoService;
+// import Java.Project.demo.service.DemoService;
 
-public class democontroller {
-    @Autowired 
-    DemoService  demoService;
-    @PostMapping ("/car")
-    public List <Car> saveCars(@RequestBody Car car){
-        return demoService.saveCars(car);
-    }
+// public class democontroller {
+//     @Autowired 
+//     DemoService  demoService;
+//     @PostMapping ("/car")
+//     public List <Car> saveCars(@RequestBody Car car){
+//         return demoService.saveCars(car);
+//     }
     
-}
+// }
 
 
 
