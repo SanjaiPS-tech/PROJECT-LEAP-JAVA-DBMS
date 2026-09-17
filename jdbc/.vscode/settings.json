@@ -1,0 +1,52 @@
+{
+    "maven.executable.preferMavenWrapper": false,
+    "maven.executable.path": "/home/vsp/.jaenvtix/jdk-17/mvn-custom/bin/jaenvtix-mvn",
+    "java.configuration.maven.userSettings": "/home/vsp/.m2/settings.xml",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/lib/jvm/java-17-openjdk",
+            "default": true
+        }
+    ],
+    "terminal.integrated.env.linux": {
+        "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk",
+        "MAVEN_HOME": "/home/vsp/.jaenvtix/jdk-17/mvn-custom",
+        "M2_HOME": "/home/vsp/.jaenvtix/jdk-17/mvn-custom",
+        "PATH": "/usr/lib/jvm/java-17-openjdk/bin:/home/vsp/.jaenvtix/jdk-17/mvn-custom/bin:${env:PATH}"
+    },
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "/usr/lib/jvm/java-17-openjdk"
+        },
+        {
+            "environmentVariable": "MAVEN_HOME",
+            "value": "/home/vsp/.jaenvtix/jdk-17/mvn-custom"
+        },
+        {
+            "environmentVariable": "M2_HOME",
+            "value": "/home/vsp/.jaenvtix/jdk-17/mvn-custom"
+        },
+        {
+            "environmentVariable": "PATH",
+            "value": "/usr/lib/jvm/java-17-openjdk/bin:/home/vsp/.jaenvtix/jdk-17/mvn-custom/bin:${env:PATH}"
+        }
+    ],
+    "maven.terminal.favorites": [
+        {
+            "alias": "Jaenvtix: Install (skip tests)",
+            "command": "clean install -DskipTests"
+        }
+    ],
+    "jaenvtix.preferredJdkVendor": "auto",
+    "jaenvtix.autoUpdatePatches": true,
+    "jaenvtix.downloadMaxRetries": 3,
+    "jaenvtix.isolatedMavenPerProject": true,
+    "jaenvtix.discoverFromToolchainsXml": true,
+    "jaenvtix.configureOptionalExtensions": true,
+    "jaenvtix.applyJavaTunings": true,
+    "jaenvtix.enableRuntimePathFix": true
+}
