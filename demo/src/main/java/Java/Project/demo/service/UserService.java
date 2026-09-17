@@ -23,4 +23,7 @@ public class UserService {
     public List<User> getAllUsers() {
         return bankRepo.findAll();
     }
+    public String findEmail(int id) {
+        return bankRepo.findEmailById(id);
+    }
 }

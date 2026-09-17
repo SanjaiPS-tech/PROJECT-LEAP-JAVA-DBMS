@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import Java.Project.demo.service.UserService;
 import Java.Project.demo.models.User;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/users")
@@ -30,6 +33,11 @@ public class UserController {
     public List<User> getUsers() {
         return userService.getAllUsers();
     }
+    @GetMapping("/{id}")
+    public String getEmail(@PathVariable int id) {
+        return userService.findEmail(id);
+    }
+    
 }
 
 
