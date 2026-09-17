@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "Java.Project.demo.DemoApplication",
+            "projectName": "demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Jaenvtix: Spring Boot (demo)",
+            "mainClass": "Java.Project.demo.DemoApplication",
+            "projectName": "demo"
+        }
+    ],
+    "version": "0.2.0"
+}
