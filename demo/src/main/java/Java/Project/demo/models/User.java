@@ -1,8 +1,8 @@
 package Java.Project.demo.models;
 
 public class User {
-    private int id;
-    private String name;
+    public int id;
+    public String name;
 
     public User() {}
 
@@ -10,6 +10,14 @@ public class User {
         this.id = id;
         this.name = name;
     }
+    public int getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+
+    
 }
 
 
