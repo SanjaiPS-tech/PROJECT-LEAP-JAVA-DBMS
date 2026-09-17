@@ -1,93 +1,13 @@
 package Java.Project.demo.models;
 
+import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+@Data
 public class User {
-    public int id;
-    public String name;
-
-    public User() {}
-
-    public User(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-    public int getId() {
-        return id;
-    }
-    public String getName() {
-        return name;
-    }
-
-    
+    @Id
+    private int id;
+    private String name;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// package Java.Project.demo.models;
-
-// public class User {
-//     private int id;
-//     private String name;
-
-//     public User() {}
-
-//     public User(int id, String name) {
-//         this.id = id;
-//         this.name = name;
-//     }
-
-//     public int getId() {
-//         return id;
-//     }
-
-//     public void setId(int id) {
-//         this.id = id;
-//     }
-
-//     public String getName() {
-//         return name;
-//     }
-
-//     public void setName(String name) {
-//         this.name = name;
-//     }
-// }
