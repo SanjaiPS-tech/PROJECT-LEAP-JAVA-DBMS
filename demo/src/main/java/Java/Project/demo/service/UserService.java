@@ -12,7 +12,6 @@ public class UserService {
     @Autowired
     private BankRepo bankRepo;
 
-    // ── User CRUD ────────────────────────────────────────────
     public User addUser(User user) {
         return bankRepo.save(user);
     }
