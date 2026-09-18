@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form & Table</title>
+
+</head>
+
+
+<style>
+    
+        /* Table */
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            color: rgb(0, 0, 0);
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2>Bank Details</h2>
+
+        <form>
+            <label>Id</label>
+            <input type="text" placeholder="Enter your Id" id="id">
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" id="name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" id="email">
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <h2>Student Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+<script>
+    function submitForm() {
+        fetch('/users')
+            .then(response => response.json())
+            .then(data => {
+                const tableData = document.getElementById('tableData');
+                tableData.innerHTML = '';
+
+                data.forEach(user => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                    `;
+                    tableData.appendChild(tr);
+                });
+            })
+    }
+    </script>
+</html>

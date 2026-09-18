@@ -16,11 +16,10 @@ public class User {
 
     private String email;
 
-    // ── Bank fields ──────────────────────────────────────────
     @Column(unique = true)
-    private String accountNumber;   // e.g. "ACC-001"
+    private String accountNumber;   
 
-    private double balance;         // current balance
+    private double balance;         
 
-    private String accountType;     // "SAVINGS" or "CURRENT"
+    private String accountType;     
 }
